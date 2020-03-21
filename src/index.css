@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(32, 32, 32);
+}
+
+#Game-section {
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  font-family: monospace;
+}
+
+#Game-section h1 {
+  color: rgb(216, 216, 216);
+}
+
+#Game-section .image {
+  cursor: pointer;
+}
+
+#Game-section .image img {
+  transition: 0.3s;
+}
+
+#Game-section .image:hover img {
+  transform: scale(1.2) rotate(2deg);
+  overflow: auto;
+}
+
+#inner-width {
+  width: 100%;
+  margin: auto;
+  padding: 20 20px;
+}
+
+#Game-section button {
+  color: rgb(32, 32, 32);
+  background-color: rgb(32, 32, 32);
+  outline-color: rgb(32, 32, 32);
+}
