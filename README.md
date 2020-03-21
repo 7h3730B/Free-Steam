@@ -7,7 +7,7 @@
 
 ---
 
-[Preview](#Preview)
+[Preview](#Preview)   
 [How to install](#how-to-install)
 
 ---
