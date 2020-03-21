@@ -1,14 +1,14 @@
 <div align="center">
     <!-- # TODO: add Image -->
     <h1>~ Free-Steam ~</h1><br>
-    <strong> A little Desktop app to show Games on Steam that are free for a limited Time </strong>
+    <strong> A little Desktop app to show games on Steam that are free for a limited time </strong>
 
 </div>
 
 ---
 
 [Preview](#Preview)
-[How to install](#How to install)
+[How to install](#how-to-install)
 
 ---
 
