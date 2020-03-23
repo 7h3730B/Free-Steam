@@ -6,7 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-packager . Free-Steam --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Free Steam Game Finder\"",
+    "package": "electron-packager . Free-Steam --overwrite --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Free Steam Game Finder\"",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
@@ -46,7 +46,6 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "electron-json-storage": "^4.1.8",
     "request": "^2.88.2"
   },
   "devDependencies": {
