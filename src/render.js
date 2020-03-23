@@ -5,9 +5,11 @@ const {
 } = require('electron');
 var gamesdiv = document.getElementById('games');
 
-var items = [];
+var lastItems = [];
 
-function rendershit() {
+function rendershit(firstload) {
+
+    if (firstload == null) firstload = false;
 
     var last = gamesdiv.innerHTML;
 
@@ -24,8 +26,9 @@ function rendershit() {
             var tbody = $('.app');
 
             var put = '';
+            var items = [];
 
-            tbody.each((i, el) => {
+            tbody.each(function (i, el) {
                 const item = $(el);
                 var raw = item.text().replace(/\s\s+/g, '').split('\n');
 
@@ -44,6 +47,30 @@ function rendershit() {
             });
             gamesdiv.innerHTML = "<h1>Loading...</h1>";
             gamesdiv.innerHTML = put;
+
+            if (firstload) {
+                lastItems = items;
+            }
+
+            items.forEach(function (ele) {
+                let geht = false;
+                let obj = lastItems.find(ite => ite.id === ele.id);
+                if (obj != null) geht = true;
+                console.log(geht);
+                if (!geht) {
+                    let gameNotification = new Notification('New free Game', {
+                        body: ele.name,
+                        icon: `https://steamcdn-a.akamaihd.net/steam/apps/${ele.id}/header_292x136.jpg?t=1584469271`,
+                        badge: 'Free-Steam'
+                    })
+
+                    gameNotification.onclick = () => {
+                        shell.openExternal(`https://store.steampowered.com/app/${ele.id}/Nibiru_Prologue/`);
+                    }
+                }
+            });
+
+            lastItems = items;
         } else {
             gamesdiv.innerHTML = last;
         }
@@ -56,6 +83,6 @@ function getContainer(url) {
   </button>`
 }
 
-rendershit();
+rendershit(true);
 
-setInterval(rendershit, 600000);
+setInterval(rendershit, 3,600,000 );

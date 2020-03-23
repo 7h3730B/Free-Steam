@@ -88,3 +88,5 @@ typings/
 # Electron-Forge
 out/
 package-lock.json
+Free-Steam-Setup.exe
+release-builds
