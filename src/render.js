@@ -56,7 +56,6 @@ function rendershit(firstload) {
                 let geht = false;
                 let obj = lastItems.find(ite => ite.id === ele.id);
                 if (obj != null) geht = true;
-                console.log(geht);
                 if (!geht) {
                     let gameNotification = new Notification('New free Game', {
                         body: ele.name,
@@ -85,4 +84,4 @@ function getContainer(url) {
 
 rendershit(true);
 
-setInterval(rendershit, 3,600,000 );
+setInterval(rendershit, 3600000 );
