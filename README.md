@@ -27,5 +27,5 @@ After your PC has booted just open the Program and look if something new is ther
 # How to install
 
 > Just for Windows at the time
-##### Please make sure to uninstall any old version of Free-Steam
+#### Please make sure to uninstall any old version of Free-Steam before installing a new one
 Just grab the newest installer from the [Releases Page](https://github.com/7h3730B/Free-Steam/releases)
