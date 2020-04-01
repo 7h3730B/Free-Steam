@@ -16,7 +16,7 @@ function rendershit(firstload) {
     gamesdiv.innerHTML = "<h1>Loading...</h1>";
 
     // making request
-    request("https://steamdb.info/sales/", (error, response, body) => {
+    request("https://steamdb.info/sales/?min_discount=95&min_rating=0", (error, response, body) => {
 
         if (!error && response.statusCode == 200) {
 
@@ -42,7 +42,7 @@ function rendershit(firstload) {
                         id: id
                     });
 
-                    put += getContainer(id);
+                    put += getContainer(id, name);
                 }
             });
             gamesdiv.innerHTML = "<h1>Loading...</h1>";
@@ -64,7 +64,7 @@ function rendershit(firstload) {
                     })
 
                     gameNotification.onclick = () => {
-                        shell.openExternal(`https://store.steampowered.com/app/${ele.id}/Nibiru_Prologue/`);
+                        shell.openExternal(`https://store.steampowered.com/app/${ele.id}/${ele.name}/`);
                     }
                 }
             });
@@ -76,12 +76,12 @@ function rendershit(firstload) {
     });
 }
 
-function getContainer(url) {
-    return `<button onClick=\"shell.openExternal('https://store.steampowered.com/app/${url}/Nibiru_Prologue/')\")\" class=\"image\">
+function getContainer(url, name) {
+    return `<button onClick=\"shell.openExternal('https://store.steampowered.com/app/${url}/${name}/')\")\" class=\"image\">
     <img src=\"https://steamcdn-a.akamaihd.net/steam/apps/${url}/header.jpg?t=1584692374\" alt=\"\">
   </button>`
 }
 
 rendershit(true);
 
-setInterval(rendershit, 3600000 );
+setInterval(rendershit, 3600000);
