@@ -23,7 +23,6 @@ function rendershit(firstload) {
         },
         (error, response, body) => {
 
-            console.log(response.statusCode);
             if (!error && response.statusCode == 200) {
 
                 const $ = cheerio.load(body);
