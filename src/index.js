@@ -13,7 +13,7 @@ function createWindow() {
   //mainWindow.setIcon('');
 
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.on('close', () => {
     mainWindow = null;

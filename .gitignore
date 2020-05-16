@@ -90,3 +90,5 @@ out/
 package-lock.json
 Free-Steam-Setup.exe
 release-builds
+Compile-Setup.iss
+Free-Steam-Setup-0-4-0.exe
