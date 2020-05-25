@@ -1,7 +1,7 @@
 <div align="center">
     <!-- # TODO: add Image -->
-    <h1>~ Free-Steam ~</h1><br/><br/>
-    <strong> A little Desktop app to show games on Steam that are free for a limited time </strong>
+    <h1>~ Free-Steam ~</h1><br/>
+    <strong> A little Desktop app to show games on Steam that are free for a limited time </strong><br/><br/>
     <img height="28" src="https://img.shields.io/github/license/7h3730B/Free-Steam?style=for-the-badge">
     <img height="28" src="https://img.shields.io/github/repo-size/7h3730B/Free-Steam?style=for-the-badge">
     <img height="28" src="https://img.shields.io/github/stars/7h3730B/Free-Steam?style=for-the-badge">
